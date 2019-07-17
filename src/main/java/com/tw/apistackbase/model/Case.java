@@ -1,7 +1,6 @@
 package com.tw.apistackbase.model;
 
 import javax.persistence.*;
-import java.util.Date;
 
 /**
  * Create with IDEA
