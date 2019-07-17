@@ -1,6 +1,6 @@
 package com.tw.apistackbase.repository;
 
-import com.tw.apistackbase.model.Case;
+import com.tw.apistackbase.model.CriminalCase;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.List;
  * @Date: Create in 21:09 2019/7/17
  * @Description:
  */
-public interface CaseRepository extends JpaRepository<Case, Integer> {
+public interface CaseRepository extends JpaRepository<CriminalCase, Integer> {
 
-    List<Case> findAllByCaseName(String caseName);
+    List<CriminalCase> findAllByCaseName(String caseName);
 }

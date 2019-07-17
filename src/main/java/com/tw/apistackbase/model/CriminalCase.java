@@ -10,8 +10,8 @@ import javax.persistence.*;
  * @Description:
  */
 @Entity
-@Table(name = "Case")
-public class Case {
+@Table(name = "Criminal_Case")
+public class CriminalCase {
     @Id
     @GeneratedValue
     private Integer id;
@@ -22,10 +22,14 @@ public class Case {
     @Column(name = "date", nullable = false)
     private Long date;
 
-    public Case() {
+    @OneToOne
+    @JoinColumn(name="detail_id",referencedColumnName="id")
+    private Detail detail;
+
+    public CriminalCase() {
     }
 
-    public Case(String caseName, Long date) {
+    public CriminalCase(String caseName, Long date) {
         this.caseName = caseName;
         this.date = date;
     }

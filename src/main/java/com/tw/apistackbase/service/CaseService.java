@@ -1,6 +1,6 @@
 package com.tw.apistackbase.service;
 
-import com.tw.apistackbase.model.Case;
+import com.tw.apistackbase.model.CriminalCase;
 import com.tw.apistackbase.repository.CaseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,19 +19,19 @@ public class CaseService {
     @Autowired
     private CaseRepository caseRepository;
 
-    public Case findById(Integer id){
+    public CriminalCase findById(Integer id){
         return caseRepository.findById(id).orElse(null);
     }
 
-    public List<Case> findAll(){
+    public List<CriminalCase> findAll(){
         return caseRepository.findAll();
     }
 
-    public Case save (Case aCass){
+    public CriminalCase save (CriminalCase aCass){
         return caseRepository.save(aCass);
     }
 
-    public List<Case> findAllByCaseName(String caseName){
+    public List<CriminalCase> findAllByCaseName(String caseName){
         return caseRepository.findAllByCaseName(caseName);
     }
 
