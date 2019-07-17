@@ -26,6 +26,10 @@ public class CriminalCase {
     @JoinColumn(name="detail_id",referencedColumnName="id")
     private Detail detail;
 
+    @ManyToOne
+    @JoinColumn(name = "company_id")
+    private Procuratorate procuratorate;
+
     public CriminalCase() {
     }
 
