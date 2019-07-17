@@ -5,6 +5,8 @@ import com.tw.apistackbase.repository.CaseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Create with IDEA
  *
@@ -19,6 +21,10 @@ public class CaseService {
 
     public Case findById(String id){
         return caseRepository.findById(id).orElse(null);
+    }
+
+    public List<Case> findAll(){
+        return caseRepository.findAll();
     }
 
 }
