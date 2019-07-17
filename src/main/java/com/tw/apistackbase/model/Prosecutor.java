@@ -18,4 +18,7 @@ public class Prosecutor {
 
     @Column(name = "name", nullable = false)
     private String name;
+
+    @ManyToOne
+    private Procuratorate procuratorate;
 }

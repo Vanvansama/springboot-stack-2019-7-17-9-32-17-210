@@ -27,7 +27,7 @@ public class CriminalCase {
     private Detail detail;
 
     @ManyToOne
-    @JoinColumn(name = "company_id")
+    @JoinColumn(name = "procuratorate_id")
     private Procuratorate procuratorate;
 
     public CriminalCase() {

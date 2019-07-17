@@ -22,4 +22,7 @@ public class Procuratorate {
 
     @OneToMany
     private List<CriminalCase> criminalCases;
+
+    @OneToMany
+    private List<Prosecutor> prosecutors;
 }
