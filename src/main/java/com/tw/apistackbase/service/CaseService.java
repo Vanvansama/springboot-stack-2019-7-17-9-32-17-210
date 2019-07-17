@@ -19,12 +19,20 @@ public class CaseService {
     @Autowired
     private CaseRepository caseRepository;
 
-    public Case findById(String id){
+    public Case findById(Integer id){
         return caseRepository.findById(id).orElse(null);
     }
 
     public List<Case> findAll(){
         return caseRepository.findAll();
+    }
+
+    public Case save (Case aCass){
+        return caseRepository.save(aCass);
+    }
+
+    public List<Case> findAllByCaseName(String caseName){
+        return caseRepository.findAllByCaseName(caseName);
     }
 
 }

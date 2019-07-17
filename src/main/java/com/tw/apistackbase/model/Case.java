@@ -14,11 +14,43 @@ import javax.persistence.*;
 public class Case {
     @Id
     @GeneratedValue
-    private String id;
+    private Integer id;
 
     @Column(name = "case_name", nullable = false)
     private String caseName;
 
     @Column(name = "date", nullable = false)
     private Long date;
+
+    public Case() {
+    }
+
+    public Case(String caseName, Long date) {
+        this.caseName = caseName;
+        this.date = date;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getCaseName() {
+        return caseName;
+    }
+
+    public void setCaseName(String caseName) {
+        this.caseName = caseName;
+    }
+
+    public Long getDate() {
+        return date;
+    }
+
+    public void setDate(Long date) {
+        this.date = date;
+    }
 }
