@@ -35,4 +35,8 @@ public class CaseService {
         return caseRepository.findAllByCaseName(caseName);
     }
 
+    public void delete(Integer id){
+        caseRepository.deleteById(id);
+    }
+
 }
