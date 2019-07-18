@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Table(name = "Criminal_Case")
 public class CriminalCase {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(name = "case_name", nullable = false)
@@ -36,6 +36,22 @@ public class CriminalCase {
     public CriminalCase(String caseName, Long date) {
         this.caseName = caseName;
         this.date = date;
+    }
+
+    public Procuratorate getProcuratorate() {
+        return procuratorate;
+    }
+
+    public void setProcuratorate(Procuratorate procuratorate) {
+        this.procuratorate = procuratorate;
+    }
+
+    public Detail getDetail() {
+        return detail;
+    }
+
+    public void setDetail(Detail detail) {
+        this.detail = detail;
     }
 
     public Integer getId() {
